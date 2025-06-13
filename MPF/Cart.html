@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="Cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-left">
+                <a href="Home.html" class="nav-icon"><i class="fas fa-home"></i></a>
+                <a href="Search.html" class="nav-icon"><i class="fas fa-search"></i></a>
+            </div>
+            <div class="nav-right">
+                <a href="Cart.html" class="nav-icon cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="Login.html" class="nav-icon"><i class="fas fa-user-circle"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="products-section">
+            <h2>Featured Products</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="Gambar/id-11134207-7r991-lpeuhrxrw8r14d.png" alt="Klee Action Figure">
+                    </div>
+                    <div class="product-info">
+                        <h3>Klee Action Figure</h3>
+                        <p class="price">Rp 450.000</p>
+                        <button class="add-to-cart-btn" data-id="1" data-name="Klee Action Figure" data-price="450000">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="Gambar/id-11134207-7r98o-lkw3o9mo0cu0eb.png" alt="Luffy Gear5 T-shirt">
+                    </div>
+                    <div class="product-info">
+                        <h3>Luffy Gear5 T-shirt</h3>
+                        <p class="price">Rp 375.000</p>
+                        <button class="add-to-cart-btn" data-id="2" data-name="Luffy Gear5 T-shirt" data-price="375000">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="Gambar/download.jpeg" alt="Novel Lord Of The Mystery">
+                    </div>
+                    <div class="product-info">
+                        <h3>Novel Lord Of The Mystery</h3>
+                        <p class="price">Rp 300.000</p>
+                        <button class="add-to-cart-btn" data-id="3" data-name="Novel Lord Of The Mystery" data-price="300000">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cart-section" id="cart-section">
+            <div class="cart-container">
+                <h2>Your List</h2>
+                <div class="cart-items" id="cart-items">
+                    <!-- Cart items will be dynamically added here -->
+                </div>
+                <div class="cart-summary">
+                    <div class="cart-total">
+                        <span>Total:</span>
+                        <span id="cart-total-amount">Rp 0</span>
+                    </div>
+                    <button class="checkout-btn">Check Out</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Shop</h3>
+            <ul class="footer-links">
+                <li><a href="#">New Arrivals</a></li>
+                <li><a href="#">Best Sellers</a></li>
+                <li><a href="#">Anime Merchandise</a></li>
+                <li><a href="#">Gaming Accessories</a></li>
+                <li><a href="#">Collectibles</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section">
+            <h3>Customer Service</h3>
+            <ul class="footer-links">
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Shipping Policy</a></li>
+                <li><a href="#">Returns & Exchanges</a></li>
+                <li><a href="#">Track Order</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section">
+            <h3>About Us</h3>
+            <ul class="footer-links">
+                <li><a href="#">Our Story</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section">
+            <h3>Connect With Us</h3>
+            <p>Subscribe to our newsletter for exclusive deals and updates.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; 2025 Gaming & Anime Store. All rights reserved.</p>
+        <div class="payment-methods">
+            <i class="fab fa-cc-visa"></i>
+            <i class="fab fa-cc-mastercard"></i>
+            <i class="fab fa-cc-paypal"></i>
+            <i class="fab fa-cc-apple-pay"></i>
+        </div>
+    </div>
+</footer>
+
+    <!-- Cart item template -->
+    <template id="cart-item-template">
+        <div class="cart-item">
+            <div class="cart-item-image">
+                <img src="/placeholder.svg" alt="">
+            </div>
+            <div class="cart-item-details">
+                <h3 class="cart-item-name"></h3>
+                <p class="cart-item-price"></p>
+                <div class="quantity-control">
+                    <button class="quantity-btn minus-btn">−</button>
+                    <input type="text" class="quantity-input" value="1" readonly>
+                    <button class="quantity-btn plus-btn">+</button>
+                </div>
+            </div>
+            <button class="remove-item-btn">×</button>
+        </div>
+    </template>
+
+    <script src="Cart.js"></script>
+</body>
+</html>

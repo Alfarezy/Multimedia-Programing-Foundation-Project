@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming & Anime Store</title>
+    <link rel="stylesheet" href="Search.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-left">
+                <a href="Home.html" class="nav-icon"><i class="fas fa-home"></i></a>
+                <a href="Search.html" class="nav-icon"><i class="fas fa-search"></i></a>
+            </div>
+            <div class="nav-right">
+                <a href="Cart.html" class="nav-icon"><i class="fas fa-shopping-cart"></i></a>
+                <a href="Login.html" class="nav-icon"><i class="fas fa-user-circle"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <form class="filter-section" id="search-form">
+            <div class="keywords">
+                <h3>Keywords</h3>
+                <div class="tags" id="keyword-tags">
+                    <span class="tag" data-keyword="Game">Game <i class="fas fa-times"></i></span>
+                    <span class="tag" data-keyword="Figure">Figure <i class="fas fa-times"></i></span>
+                    <span class="tag" data-keyword="Modern">Modern <i class="fas fa-times"></i></span>
+                </div>
+            </div>
+            
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+            
+            <div class="sort-options">
+                <label class="sort-option">
+                    <input type="radio" name="sort" value="new" checked>
+                    <span class="checkmark"></span>
+                    New
+                </label>
+                <label class="sort-option">
+                    <input type="radio" name="sort" value="price_asc">
+                    <span class="checkmark"></span>
+                    Lowest Price
+                </label>
+                <label class="sort-option">
+                    <input type="radio" name="sort" value="price_desc">
+                    <span class="checkmark"></span>
+                    Highest Price
+                </label>
+                <label class="sort-option">
+                    <input type="radio" name="sort" value="rating">
+                    <span class="checkmark"></span>
+                    Rating
+                </label>
+            </div>
+        </form>
+
+        <div class="products-grid" id="products-grid">
+            <!-- Row 1 -->
+            <div class="product-card" data-name="Klee Action Figure" data-price="450000" data-category="Figure">
+                <a href="Reviews.html" class="product-link">
+                    <div class="product-image">
+                        <img src="Gambar/id-11134207-7r991-lpeuhrxrw8r14d.png" alt="Klee Action Figure">
+                    </div>
+                    <div class="product-info">
+                        <h3>Klee Action Figure</h3>
+                        <p class="price">Rp 450.000</p>
+                    </div>
+                </a>
+                <div class="product-buttons">
+                    <button class="add-to-cart-btn" data-id="1" data-name="Klee Action Figure" data-price="450000">Add to Cart</button>
+                    <a href="Reviews.html" class="review-btn"><i class="fas fa-star"></i> Reviews</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-name="Luffy Gear 5 T-shirt" data-price="375000" data-category="Clothing">
+                <a href="Reviews.html" class="product-link">
+                    <div class="product-image">
+                        <img src="Gambar/id-11134207-7r98o-lkw3o9mo0cu0eb.png" alt="Luffy Gear 5 T-shirt">
+                    </div>
+                    <div class="product-info">
+                        <h3>Luffy Gear 5 T-shirt</h3>
+                        <p class="price">Rp 375.000</p>
+                    </div>
+                </a>
+                <div class="product-buttons">
+                    <button class="add-to-cart-btn" data-id="2" data-name="Luffy Gear 5 T-shirt" data-price="375000">Add to Cart</button>
+                    <a href="Reviews.html" class="review-btn"><i class="fas fa-star"></i> Reviews</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-name="Nintendo Switch" data-price="4500000" data-category="Game">
+                <a href="Reviews.html" class="product-link">
+                    <div class="product-image">
+                        <img src="Gambar/94c0282d-0e08-48f5-b6b1-62de1b0051c0.png" alt="Nintendo Switch">
+                    </div>
+                    <div class="product-info">
+                        <h3>Nintendo Switch</h3>
+                        <p class="price">Rp 4.500.000</p>
+                    </div>
+                </a>
+                <div class="product-buttons">
+                    <button class="add-to-cart-btn" data-id="3" data-name="Nintendo Switch" data-price="4500000">Add to Cart</button>
+                    <a href="Reviews.html" class="review-btn"><i class="fas fa-star"></i> Reviews</a>
+                </div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="product-card" data-name="Gameboy Console" data-price="2250000" data-category="Game">
+                <a href="Reviews.html" class="product-link">
+                    <div class="product-image">
+                        <img src="Gambar/2Q.png" alt="Gameboy Console">
+                    </div>
+                    <div class="product-info">
+                        <h3>Gameboy Console</h3>
+                        <p class="price">Rp 2.250.000</p>
+                    </div>
+                </a>
+                <div class="product-buttons">
+                    <button class="add-to-cart-btn" data-id="4" data-name="Gameboy Console" data-price="2250000">Add to Cart</button>
+                    <a href="Reviews.html" class="review-btn"><i class="fas fa-star"></i> Reviews</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-name="KingdomHeart Keychain" data-price="75000" data-category="Accessory">
+                <a href="Reviews.html" class="product-link">
+                    <div class="product-image">
+                        <img src="Gambar/keyChain.png" alt="KingdomHeart Keychain">
+                    </div>
+                    <div class="product-info">
+                        <h3>KingdomHeart Keychain</h3>
+                        <p class="price">Rp 75.000</p>
+                    </div>
+                </a>
+                <div class="product-buttons">
+                    <button class="add-to-cart-btn" data-id="5" data-name="KingdomHeart Keychain" data-price="75000">Add to Cart</button>
+                    <a href="Reviews.html" class="review-btn"><i class="fas fa-star"></i> Reviews</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-name="Blade Keychain" data-price="65000" data-category="Accessory">
+                <a href="Reviews.html" class="product-link">
+                    <div class="product-image">
+                        <img src="Gambar/Keyblade.png" alt="Blade Keychain">
+                    </div>
+                    <div class="product-info">
+                        <h3>Blade Keychain</h3>
+                        <p class="price">Rp 65.000</p>
+                    </div>
+                </a>
+                <div class="product-buttons">
+                    <button class="add-to-cart-btn" data-id="6" data-name="Blade Keychain" data-price="65000">Add to Cart</button>
+                    <a href="Reviews.html" class="review-btn"><i class="fas fa-star"></i> Reviews</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Shop</h3>
+            <ul class="footer-links">
+                <li><a href="#">New Arrivals</a></li>
+                <li><a href="#">Best Sellers</a></li>
+                <li><a href="#">Anime Merchandise</a></li>
+                <li><a href="#">Gaming Accessories</a></li>
+                <li><a href="#">Collectibles</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section">
+            <h3>Customer Service</h3>
+            <ul class="footer-links">
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Shipping Policy</a></li>
+                <li><a href="#">Returns & Exchanges</a></li>
+                <li><a href="#">Track Order</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section">
+            <h3>About Us</h3>
+            <ul class="footer-links">
+                <li><a href="#">Our Story</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section">
+            <h3>Connect With Us</h3>
+            <p>Subscribe to our newsletter for exclusive deals and updates.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; 2025 Gaming & Anime Store. All rights reserved.</p>
+        <div class="payment-methods">
+            <i class="fab fa-cc-visa"></i>
+            <i class="fab fa-cc-mastercard"></i>
+            <i class="fab fa-cc-paypal"></i>
+            <i class="fab fa-cc-apple-pay"></i>
+        </div>
+    </div>
+</footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Cart functionality
+            const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            
+            // Update cart count display
+            function updateCartCount() {
+                const cartCount = document.createElement('span');
+                cartCount.className = 'cart-count';
+                const count = cart.reduce((sum, item) => sum + item.quantity, 0);
+                cartCount.textContent = count;
+                
+                // Remove existing cart count if any
+                const existingCount = document.querySelector('.cart-count');
+                if (existingCount) {
+                    existingCount.remove();
+                }
+                
+                // Add cart count to cart icon
+                const cartIcon = document.querySelector('.fa-shopping-cart').parentElement;
+                cartIcon.appendChild(cartCount);
+            }
+            
+            // Initialize cart count
+            updateCartCount();
+            
+            // Add to cart functionality
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const id = this.dataset.id;
+                    const name = this.dataset.name;
+                    const price = Number(this.dataset.price);
+                    const productCard = this.closest('.product-card');
+                    const imageSrc = productCard.querySelector('.product-image img').src;
+                    
+                    // Check if item is already in cart
+                    const existingItemIndex = cart.findIndex(item => item.id === id);
+                    
+                    if (existingItemIndex !== -1) {
+                        // Item exists, increase quantity
+                        cart[existingItemIndex].quantity += 1;
+                    } else {
+                        // Add new item to cart
+                        cart.push({
+                            id,
+                            name,
+                            price,
+                            image: imageSrc,
+                            quantity: 1
+                        });
+                    }
+                    
+                    // Save cart to localStorage
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    
+                    // Update cart count
+                    updateCartCount();
+                    
+                    // Show feedback
+                    const originalText = this.textContent;
+                    this.textContent = 'Added!';
+                    this.disabled = true;
+                    
+                    setTimeout(() => {
+                        this.textContent = originalText;
+                        this.disabled = false;
+                    }, 1000);
+                });
+            });
+            
+            // Search and filter functionality
+            const searchForm = document.getElementById('search-form');
+            const searchInput = document.getElementById('search-input');
+            const productCards = document.querySelectorAll('.product-card');
+            const keywordTags = document.getElementById('keyword-tags');
+            
+            // Handle search form submission
+            searchForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const searchTerm = searchInput.value.trim().toLowerCase();
+                
+                if (searchTerm) {
+                    // Add search term as a tag if it doesn't exist
+                    const existingTags = Array.from(keywordTags.querySelectorAll('.tag')).map(tag => 
+                        tag.getAttribute('data-keyword').toLowerCase()
+                    );
+                    
+                    if (!existingTags.includes(searchTerm)) {
+                        addKeywordTag(searchTerm);
+                    }
+                }
+                
+                filterProducts();
+            });
+            
+            // Add keyword tag
+            function addKeywordTag(keyword) {
+                const tag = document.createElement('span');
+                tag.className = 'tag';
+                tag.setAttribute('data-keyword', keyword);
+                tag.innerHTML = `${keyword} <i class="fas fa-times"></i>`;
+                
+                // Add click event to remove tag
+                tag.querySelector('i').addEventListener('click', function() {
+                    tag.remove();
+                    filterProducts();
+                });
+                
+                keywordTags.appendChild(tag);
+            }
+            
+            // Add click events to existing tags
+            document.querySelectorAll('.tag i').forEach(icon => {
+                icon.addEventListener('click', function() {
+                    this.parentElement.remove();
+                    filterProducts();
+                });
+            });
+            
+            // Sort products
+            const sortOptions = document.querySelectorAll('input[name="sort"]');
+            sortOptions.forEach(option => {
+                option.addEventListener('change', filterProducts);
+            });
+            
+            // Filter and sort products
+            function filterProducts() {
+                const keywords = Array.from(keywordTags.querySelectorAll('.tag')).map(tag => 
+                    tag.getAttribute('data-keyword').toLowerCase()
+                );
+                
+                const sortValue = document.querySelector('input[name="sort"]:checked').value;
+                
+                // Filter products based on keywords
+                productCards.forEach(card => {
+                    const productName = card.getAttribute('data-name').toLowerCase();
+                    const productCategory = card.getAttribute('data-category').toLowerCase();
+                    
+                    // If no keywords, show all products
+                    if (keywords.length === 0) {
+                        card.style.display = 'block';
+                        return;
+                    }
+                    
+                    // Check if product matches any keyword
+                    const matchesKeyword = keywords.some(keyword => 
+                        productName.includes(keyword) || productCategory.includes(keyword)
+                    );
+                    
+                    card.style.display = matchesKeyword ? 'block' : 'none';
+                });
+                
+                // Sort products
+                const productsGrid = document.getElementById('products-grid');
+                const productsArray = Array.from(productCards);
+                
+                productsArray.sort((a, b) => {
+                    const priceA = parseInt(a.getAttribute('data-price'));
+                    const priceB = parseInt(b.getAttribute('data-price'));
+                    
+                    switch (sortValue) {
+                        case 'price_asc':
+                            return priceA - priceB;
+                        case 'price_desc':
+                            return priceB - priceA;
+                        case 'rating':
+                            // For demo purposes, we'll just use a random sort for rating
+                            return 0.5 - Math.random();
+                        default: // 'new'
+                            // For demo purposes, we'll keep the original order for 'new'
+                            return 0;
+                    }
+                });
+                
+                // Re-append sorted products
+                productsArray.forEach(card => {
+                    productsGrid.appendChild(card);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
